@@ -1,4 +1,18 @@
 
+library(traveltimeR)
+library(ggplot2)
+library(sf)
+library(geojsonsf)
+library(plotly)
+library(ggmap)
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(httr)
+library(geojsonio)
+library(geojsonsf)
+library(sf)
+
 #FUNCTION FROM UTILS
 create_matrix<-function(hospitals,lsoa_map,lsoa_filter,provider,time,method,travel_type,fast){
   
