@@ -1,12 +1,12 @@
 
-source('/Users/zeyadissa/Desktop/NCL handover/Generate Data.R')
+source('Generate Data.R')
 
 #LSOA bounds
 url_lsoa11 <- 'https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/LSOA_Dec_2011_Boundaries_Generalised_Clipped_BGC_EW_V3/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson'
 lsoa <- sf::st_read(url_lsoa11) 
 
-hospitals <- read.csv('/Users/zeyadissa/Desktop/NCL handover/all_hospitals.csv')
-mapping <- read.csv('/Users/zeyadissa/Desktop/NCL handover/lsoa_ics_mapping.csv')
+hospitals <- read.csv('all_hospitals.csv')
+mapping <- read.csv('lsoa_ics_mapping.csv')
 
 #Generate Map
 lsoa_map <- lsoa %>% 
